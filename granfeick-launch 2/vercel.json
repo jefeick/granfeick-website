@@ -1,5 +1,47 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/privacy",
+      "destination": "/clocktown-privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/clocktown-privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/clocktown-terms/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/clocktown-terms/",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "/clocktown-support/",
+      "permanent": true
+    },
+    {
+      "source": "/support.html",
+      "destination": "/clocktown-support/",
+      "permanent": true
+    },
+    {
+      "source": "/delete-account",
+      "destination": "/clocktown-data-deletion/",
+      "permanent": true
+    },
+    {
+      "source": "/account-deletion",
+      "destination": "/clocktown-data-deletion/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
