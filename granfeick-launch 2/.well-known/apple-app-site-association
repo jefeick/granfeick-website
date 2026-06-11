@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "D49NSU8NF5.com.clocktown.budgeting"
+        ],
+        "components": [
+          {
+            "/": "/plaid/*",
+            "comment": "Returns Plaid OAuth sessions to Clocktown Budgeting."
+          }
+        ]
+      }
+    ]
+  }
+}
