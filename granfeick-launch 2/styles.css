@@ -399,6 +399,10 @@ a {
   color: var(--muted);
 }
 
+.feature-card p {
+  grid-column: 2;
+}
+
 .company-section {
   color: #ffffff;
   background:
