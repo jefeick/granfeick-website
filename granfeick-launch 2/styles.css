@@ -1,18 +1,19 @@
 :root {
-  --ink: #101318;
-  --muted: #626a74;
-  --paper: #f3f4f5;
+  --ink: #071426;
+  --muted: #5d6470;
+  --paper: #fffdf7;
   --surface: #ffffff;
-  --navy: #0b2d61;
-  --navy-deep: #111923;
-  --graphite: #444d58;
-  --graphite-deep: #0e1116;
-  --steel: #748292;
-  --steel-light: #b8c2cd;
-  --accent: #315f96;
-  --accent-soft: #e1e7ed;
-  --line: rgba(16, 19, 24, 0.14);
-  --shadow: 0 18px 48px rgba(16, 19, 24, 0.13);
+  --teal: #003893;
+  --teal-deep: #071426;
+  --teal-ink: #050b13;
+  --teal-soft: #dce7f8;
+  --colombia-gold: #fcd116;
+  --colombia-blue: #003893;
+  --colombia-red: #ce1126;
+  --gold: var(--colombia-gold);
+  --coral: var(--colombia-red);
+  --line: rgba(7, 20, 38, 0.14);
+  --shadow: 0 18px 48px rgba(7, 20, 38, 0.14);
   --max: 1160px;
 }
 
@@ -28,7 +29,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(116, 130, 146, 0.13), transparent 360px),
+    linear-gradient(180deg, rgba(252, 209, 22, 0.12), transparent 360px),
     var(--paper);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -67,7 +68,7 @@ a {
 .site-header.is-scrolled,
 .site-header.is-open {
   color: var(--ink);
-  background: rgba(243, 244, 245, 0.94);
+  background: rgba(255, 253, 247, 0.94);
   box-shadow: 0 1px 0 var(--line);
   backdrop-filter: blur(16px);
 }
@@ -88,16 +89,16 @@ a {
 .brand-mark {
   width: 38px;
   height: 38px;
-  border: 1px solid rgba(16, 19, 24, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 6px;
-  background: #aeb4bc;
+  background: #111111;
   object-fit: cover;
   object-position: center;
 }
 
 .site-header.is-scrolled .brand-mark,
 .site-header.is-open .brand-mark {
-  border-color: rgba(16, 19, 24, 0.22);
+  border-color: rgba(7, 63, 60, 0.22);
 }
 
 .nav {
@@ -115,13 +116,8 @@ a {
 }
 
 .nav a[aria-current="page"] {
-  color: var(--steel-light);
+  color: var(--colombia-gold);
   opacity: 1;
-}
-
-.site-header.is-scrolled .nav a[aria-current="page"],
-.site-header.is-open .nav a[aria-current="page"] {
-  color: var(--navy);
 }
 
 .nav-toggle {
@@ -148,7 +144,7 @@ a {
   min-height: 82svh;
   overflow: hidden;
   isolation: isolate;
-  background: var(--graphite-deep);
+  background: var(--teal-ink);
 }
 
 .hero-image {
@@ -166,8 +162,8 @@ a {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(8, 11, 16, 0.9) 0%, rgba(14, 23, 36, 0.68) 42%, rgba(14, 17, 22, 0.14) 76%),
-    linear-gradient(0deg, rgba(11, 45, 97, 0.18), rgba(116, 130, 146, 0.06));
+    linear-gradient(90deg, rgba(5, 11, 19, 0.88) 0%, rgba(7, 20, 38, 0.64) 42%, rgba(7, 20, 38, 0.18) 76%),
+    linear-gradient(0deg, rgba(0, 56, 147, 0.16), rgba(252, 209, 22, 0.08));
 }
 
 .hero::after {
@@ -178,8 +174,13 @@ a {
   z-index: 1;
   height: 5px;
   content: "";
-  background: linear-gradient(90deg, var(--navy), var(--steel), var(--graphite-deep));
-  opacity: 0.9;
+  background: linear-gradient(
+    90deg,
+    var(--colombia-gold) 0 50%,
+    var(--colombia-blue) 50% 75%,
+    var(--colombia-red) 75% 100%
+  );
+  opacity: 0.82;
 }
 
 .hero-content {
@@ -196,17 +197,11 @@ a {
 .eyebrow,
 .section-kicker {
   margin: 0 0 16px;
-  color: var(--navy);
+  color: var(--gold);
   font-size: 0.76rem;
   font-weight: 820;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-}
-
-.hero .eyebrow,
-.intro-band .section-kicker,
-.page-hero .eyebrow {
-  color: var(--steel-light);
 }
 
 .hero h1 {
@@ -252,12 +247,12 @@ a {
 }
 
 .button-primary {
-  background: var(--accent);
-  color: #ffffff;
+  background: var(--gold);
+  color: var(--teal-ink);
 }
 
 .button-primary:hover {
-  background: #244d7f;
+  background: #ffe15f;
 }
 
 .button-secondary {
@@ -284,9 +279,9 @@ a {
 
 .intro-band {
   background:
-    linear-gradient(90deg, rgba(116, 130, 146, 0.16), transparent 46%),
-    linear-gradient(135deg, rgba(49, 95, 150, 0.22), transparent 56%),
-    var(--navy-deep);
+    linear-gradient(90deg, rgba(252, 209, 22, 0.13), transparent 46%),
+    linear-gradient(135deg, rgba(0, 56, 147, 0.2), transparent 56%),
+    var(--teal-deep);
   color: #ffffff;
 }
 
@@ -319,7 +314,7 @@ a {
 
 .product-section {
   background:
-    linear-gradient(180deg, rgba(116, 130, 146, 0.11), transparent 280px),
+    linear-gradient(180deg, rgba(252, 209, 22, 0.08), transparent 280px),
     var(--paper);
 }
 
@@ -336,12 +331,9 @@ a {
 }
 
 .product-copy .section-kicker,
+.company-section .section-kicker,
 .contact-section .section-kicker {
-  color: var(--graphite);
-}
-
-.company-section .section-kicker {
-  color: var(--steel-light);
+  color: var(--coral);
 }
 
 .product-copy p {
@@ -351,7 +343,7 @@ a {
 .text-link {
   display: inline-flex;
   margin-top: 26px;
-  color: var(--navy);
+  color: var(--colombia-blue);
   font-weight: 780;
   border-bottom: 2px solid currentColor;
 }
@@ -381,11 +373,16 @@ a {
   left: 0;
   width: 5px;
   content: "";
-  background: linear-gradient(180deg, var(--steel-light), var(--navy), var(--graphite));
+  background: linear-gradient(
+    180deg,
+    var(--colombia-gold) 0 50%,
+    var(--colombia-blue) 50% 75%,
+    var(--colombia-red) 75% 100%
+  );
 }
 
 .feature-index {
-  color: var(--navy);
+  color: var(--colombia-blue);
   font-weight: 840;
 }
 
@@ -409,9 +406,10 @@ a {
 .company-section {
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(116, 130, 146, 0.18), transparent 36%),
-    linear-gradient(315deg, rgba(49, 95, 150, 0.18), transparent 40%),
-    var(--graphite-deep);
+    linear-gradient(135deg, rgba(252, 209, 22, 0.16), transparent 36%),
+    linear-gradient(315deg, rgba(206, 17, 38, 0.14), transparent 38%),
+    linear-gradient(90deg, rgba(0, 56, 147, 0.2), transparent 54%),
+    var(--teal-ink);
 }
 
 .company-grid {
@@ -425,7 +423,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  background: #64676b;
+  background: #ffffff;
   box-shadow: 0 22px 54px rgba(0, 0, 0, 0.18);
 }
 
@@ -451,7 +449,7 @@ a {
 
 .contact-section {
   background:
-    linear-gradient(90deg, rgba(116, 130, 146, 0.17), transparent 44%),
+    linear-gradient(90deg, rgba(252, 209, 22, 0.16), transparent 44%),
     var(--surface);
 }
 
@@ -471,7 +469,7 @@ a {
 }
 
 .contact-actions p a {
-  color: var(--navy);
+  color: var(--colombia-blue);
   font-weight: 760;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -496,7 +494,7 @@ a {
 
 .footer-inner a {
   font-weight: 720;
-  color: var(--navy-deep);
+  color: var(--teal-deep);
 }
 
 .footer-links {
@@ -514,9 +512,10 @@ a {
   padding: clamp(132px, 17vw, 184px) 0 clamp(64px, 9vw, 112px);
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(116, 130, 146, 0.2), transparent 34%),
-    linear-gradient(315deg, rgba(49, 95, 150, 0.2), transparent 38%),
-    var(--graphite-deep);
+    linear-gradient(135deg, rgba(252, 209, 22, 0.18), transparent 34%),
+    linear-gradient(315deg, rgba(206, 17, 38, 0.16), transparent 36%),
+    linear-gradient(90deg, rgba(0, 56, 147, 0.28), transparent 58%),
+    var(--teal-ink);
 }
 
 .page-hero h1 {
@@ -536,7 +535,7 @@ a {
 }
 
 .page-hero a {
-  color: var(--steel-light);
+  color: var(--colombia-gold);
   font-weight: 780;
 }
 
@@ -566,7 +565,7 @@ a {
 }
 
 .legal-toc a {
-  color: var(--navy);
+  color: var(--colombia-blue);
   font-weight: 740;
 }
 
@@ -618,7 +617,7 @@ a {
 
 .doc-card a,
 .support-layout a {
-  color: var(--navy);
+  color: var(--colombia-blue);
   font-weight: 760;
 }
 
@@ -626,8 +625,8 @@ a {
   max-width: 760px;
   margin: 24px 0;
   padding: 18px 20px;
-  border-left: 4px solid var(--accent);
-  background: rgba(49, 95, 150, 0.09);
+  border-left: 4px solid var(--colombia-gold);
+  background: rgba(252, 209, 22, 0.12);
   color: var(--ink);
 }
 
@@ -658,7 +657,7 @@ a {
 }
 
 .legal-link-card:hover {
-  border-color: var(--accent);
+  border-color: var(--colombia-blue);
 }
 
 .support-layout {
@@ -708,9 +707,9 @@ a {
 .support-form input:focus,
 .support-form select:focus,
 .support-form textarea:focus {
-  outline: 3px solid rgba(116, 130, 146, 0.38);
+  outline: 3px solid rgba(252, 209, 22, 0.45);
   outline-offset: 1px;
-  border-color: var(--accent);
+  border-color: var(--colombia-blue);
 }
 
 .support-form .button {
@@ -745,9 +744,9 @@ a {
     display: grid;
     gap: 0;
     padding: 10px 20px 22px;
-    background: rgba(243, 244, 245, 0.97);
+    background: rgba(251, 251, 247, 0.97);
     color: var(--ink);
-    box-shadow: 0 18px 34px rgba(16, 19, 24, 0.12);
+    box-shadow: 0 18px 34px rgba(13, 36, 32, 0.12);
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none;
@@ -778,8 +777,8 @@ a {
 
   .hero-shade {
     background:
-      linear-gradient(90deg, rgba(8, 11, 16, 0.86) 0%, rgba(14, 23, 36, 0.58) 62%, rgba(14, 17, 22, 0.18) 100%),
-      linear-gradient(0deg, rgba(11, 45, 97, 0.18), rgba(14, 17, 22, 0.04));
+      linear-gradient(90deg, rgba(5, 28, 27, 0.82) 0%, rgba(5, 28, 27, 0.54) 62%, rgba(5, 28, 27, 0.2) 100%),
+      linear-gradient(0deg, rgba(5, 28, 27, 0.2), rgba(5, 28, 27, 0.04));
   }
 
   .hero h1 {
