@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -579,6 +580,10 @@ a {
 
 .doc-card {
   padding: clamp(24px, 5vw, 48px);
+}
+
+.doc-card [id] {
+  scroll-margin-top: 88px;
 }
 
 .doc-card h2,
